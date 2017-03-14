@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.e3juhleh.alarmclock.MainActivity">
+
+    <Button
+        android:text="Alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarmButton"
+        android:layout_alignBaseline="@+id/snoozeButton"
+        android:layout_alignBottom="@+id/snoozeButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeButton"
+        android:layout_alignBaseline="@+id/alarmButton"
+        android:layout_alignBottom="@+id/alarmButton"
+        android:layout_toLeftOf="@+id/alarmButton"
+        android:layout_toStartOf="@+id/alarmButton" />
+
+    <Button
+        android:text="Snooze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/snoozeButton"
+        android:layout_marginTop="169dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="MM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minutesText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignBaseline="@+id/hoursText"
+        android:layout_alignBottom="@+id/hoursText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignBaseline="@+id/minutesText"
+        android:layout_alignBottom="@+id/minutesText"
+        android:layout_toLeftOf="@+id/minutesText"
+        android:layout_toStartOf="@+id/minutesText" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staticText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignBaseline="@+id/minutesText"
+        android:layout_alignBottom="@+id/minutesText"
+        android:layout_toRightOf="@+id/minutesText"
+        android:layout_toEndOf="@+id/minutesText" />
+
+    <TextView
+        android:text="SS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondsText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignBaseline="@+id/staticText"
+        android:layout_alignBottom="@+id/staticText"
+        android:layout_toRightOf="@+id/staticText"
+        android:layout_toEndOf="@+id/staticText" />
+
+    <TextView
+        android:text="HH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hoursText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_marginBottom="44dp"
+        android:layout_above="@+id/alarmButton"
+        android:layout_toLeftOf="@+id/textView9"
+        android:layout_toStartOf="@+id/textView9" />
+
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:id="@+id/decreaseTimer"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_below="@+id/alarmButton"
+        android:layout_toRightOf="@+id/decreaseTimerBig"
+        android:layout_toEndOf="@+id/decreaseTimerBig" />
+
+    <Button
+        android:text="---"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decreaseTimerBig"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_alignBaseline="@+id/decreaseTimer"
+        android:layout_alignBottom="@+id/decreaseTimer"
+        android:layout_alignLeft="@+id/timeButton"
+        android:layout_alignStart="@+id/timeButton" />
+
+    <Button
+        android:text="+++"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/increaseTimerBig"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_alignBaseline="@+id/decreaseTimer"
+        android:layout_alignBottom="@+id/decreaseTimer"
+        android:layout_alignRight="@+id/snoozeButton"
+        android:layout_alignEnd="@+id/snoozeButton" />
+
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/increaseTimer"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_alignBaseline="@+id/increaseTimerBig"
+        android:layout_alignBottom="@+id/increaseTimerBig"
+        android:layout_toRightOf="@+id/staticText"
+        android:layout_toEndOf="@+id/staticText" />
+
+    <Button
+        android:text="Stop alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopButton"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@+id/decreaseTimer"
+        android:layout_toRightOf="@+id/timeButton"
+        android:layout_toEndOf="@+id/timeButton"
+        android:visibility="gone" />
+
+    <Button
+        android:text="Start Alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startButton"
+        android:background="@android:color/holo_green_dark"
+        android:layout_below="@+id/decreaseTimer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <Button
+        android:text="WAKEYWAKEY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wakey"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/decreaseTimer"
+        android:layout_toStartOf="@+id/decreaseTimer"
+        android:id="@+id/toggleButton"
+        android:checked="false"
+        android:textOff="turha" />
+
+</RelativeLayout>
